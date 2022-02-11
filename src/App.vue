@@ -1,32 +1,53 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <AsideLeft />
+    <TabsMenu />
+    <TrackNav />
+    <AsideRight />
+    <Hero />
+    <PopularSection />
+    <LatestSection />
+    <FansAlsoLike />
   </div>
 </template>
 
+
+<script>
+import AsideLeft from "./components/AsideLeft.vue";
+import AsideRight from "./components/AsideRight.vue";
+import TrackNav from "./components/TrackNav.vue";
+import Hero from "./components/Hero.vue";
+import TabsMenu from "./components/TabsMenu.vue";
+import PopularSection from './components/PopularSection.vue' ;
+import LatestSection from './components/LatestSection.vue';
+import FansAlsoLike from './components/FansAlsoLike.vue';
+
+export default {
+  components: {
+    AsideLeft,
+    TrackNav,
+    AsideRight,
+    Hero,
+    TabsMenu,
+    PopularSection,
+    LatestSection,
+    FansAlsoLike
+  },
+};
+</script>
+
+
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  width: 1366px;
+  left: -700px;
+  top: 34px;
+  
+  background: #0a0a0a;
+  border: .01px solid black;
+  height: 768px;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+template {
+  background: #0a0a0a;
 }
 </style>
