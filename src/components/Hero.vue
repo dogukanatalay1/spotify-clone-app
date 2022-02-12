@@ -53,7 +53,7 @@
 
 <script setup>
 import axios from "axios";
-import queryString from 'query-string';
+import queryString from "query-string";
 
 export default {
   data() {
@@ -61,34 +61,43 @@ export default {
   },
   mounted() {
     // The code block that is going to be executed when the app or the component loaded
-     const urlSearchParams = new URLSearchParams(window.location.search);
-     const params = Object.fromEntries(urlSearchParams.entries());
+    const urlSearchParams = new URLSearchParams(window.location.search);
+    const params = Object.fromEntries(urlSearchParams.entries());
 
-
-    if(!params.code){
+    if (!params.code) {
       return;
     }
-      axios.post("https://accounts.spotify.com/api/token", 
-      queryString.stringify({
-
-      code: params.code,
-      redirect_uri: "http://localhost:8080/",
-      grant_type: "authorization_code",
-    }),{
-      headers: {
-        "Content-Type" : 'application/x-www-form-urlencoded',
-        "Authorization" : 'Basic ' + (new Buffer('9213e5356f634d9c9419f317e2bd646f' + ':' + '9f74c0f0c8b740c181acfa33c91da0ee').toString('base64')),
-      }
-    }).then(res =>{
-      localStorage.setItem('access_token', res.data.access_token);
-    });
+    axios
+      .post(
+        "https://accounts.spotify.com/api/token",
+        queryString.stringify({
+          code: params.code,
+          redirect_uri: "http://localhost:8080/",
+          grant_type: "authorization_code",
+        }),
+        {
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+            Authorization:
+              "Basic " +
+              new Buffer(
+                process.env.VUE_APP_CLIENT_ID +
+                  ":" +
+                  process.env.VUE_APP_CLIENT_SECRET
+              ).toString("base64"),
+          },
+        }
+      )
+      .then((res) => {
+        localStorage.setItem("access_token", res.data.access_token);
+      });
   },
   methods: {
     loginSpotify() {
       const url = "https://accounts.spotify.com/authorize";
       let params = {
         response_type: "code",
-        client_id: "9213e5356f634d9c9419f317e2bd646f",
+        client_id: process.env.VUE_APP_CLIENT_ID,
         scope: "user-read-private user-read-email",
         redirect_uri: "http://localhost:8080/",
         show_dialog: true,
