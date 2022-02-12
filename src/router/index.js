@@ -3,6 +3,10 @@ import VueRouter from "vue-router";
 import VueAxios from "vue-axios";
 import axios from "axios";
 
+ var Spotify = require('spotify-web-api-js');
+ var s = new Spotify();
+ s.searchTracks();
+
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 

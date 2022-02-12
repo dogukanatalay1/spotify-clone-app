@@ -5,7 +5,7 @@
     <TrackNav />
     <AsideRight />
     <Hero />
-    <PopularSection />
+    <playlists />
     <LatestSection />
     <FansAlsoLike />
   </div>
@@ -18,7 +18,7 @@ import AsideRight from "./components/AsideRight.vue";
 import TrackNav from "./components/TrackNav.vue";
 import Hero from "./components/Hero.vue";
 import TabsMenu from "./components/TabsMenu.vue";
-import PopularSection from './components/PopularSection.vue' ;
+import Playlists from './components/Playlists.vue' ;
 import LatestSection from './components/LatestSection.vue';
 import FansAlsoLike from './components/FansAlsoLike.vue';
 
@@ -29,7 +29,7 @@ export default {
     AsideRight,
     Hero,
     TabsMenu,
-    PopularSection,
+    Playlists,
     LatestSection,
     FansAlsoLike
   },

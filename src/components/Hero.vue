@@ -51,7 +51,7 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import axios from "axios";
 import queryString from "query-string";
 
@@ -89,7 +89,8 @@ export default {
         }
       )
       .then((res) => {
-        localStorage.setItem("access_token", res.data.access_token);
+        localStorage.setItem('access_token', res.data.access_token);
+        // later, we call access_token in Playlists.vue 
       });
   },
   methods: {
