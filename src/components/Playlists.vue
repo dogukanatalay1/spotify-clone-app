@@ -4,23 +4,23 @@
       Playlists
     </p>
 
-    <div class="items d-flex flex-column position-static">
-      <div class="song-item d-flex flex-row align-items-center position-static" v-for="playlist in playlists" :key="playlist.id">
-        <img src="../assets/images/Song Cover.png" class="song-cover" alt="" />
+    <div class="items d-flex flex-column position-static" v-for="(playlist,index) in playlists" :key="playlist.id">
+      <div class="song-item d-flex flex-row align-items-center position-static">
+        <img :src="playlist.images.length > 0 ? playlist.images[0].url : unknownUrl" class="song-cover" alt="" />
         <p
           class="no position-static d-flex align-items-center text-align-center"
         >
-          1
+          {{ index + 1}}
         </p>
         <div class="icon">
           <img src="../assets/images/heart.png" class="heart-icon" alt="" />
         </div>
 
         <span class="song-title position-static d-flex align-items-center">
-          Song Title - Albums - Singer
+          {{ playlist.name }}
         </span>
         <span class="total-played position-static d-flex align-items-center">
-          11,232,020
+          {{ playlist.owner.display_name }}
         </span>
       </div>
 
@@ -28,24 +28,30 @@
         <img src="../assets/images/divider.png" class="divider-cross" alt="" />
       </div>
 
-    </div>
+    </div>  
   </div>
 </template>
 
 <script>
-import SpotifyWebApi from 'spotify-web-api-js';
-import { ref } from '@vue/reactivity';
-
-const playlist = ref([]); 
+ import SpotifyWebApi from 'spotify-web-api-js';
 
 export default {
+  data(){
+    return{
+      playlists : [],
+      unknownUrl : require("../assets/images/Song Cover.png")
+    }
+
+  },
+  
   mounted () {
     const spotifyApi = new SpotifyWebApi();
 
     spotifyApi.setAccessToken(localStorage.getItem('access_token'));
 
     spotifyApi.getUserPlaylists().then(res =>{
-      playlist.value = res.items;
+      this.playlists = res.items;
+      console.log(res);
     })
     
   }
@@ -91,8 +97,6 @@ export default {
   height: 199px;
   left: 0px;
   top: 28px;
-
-  flex: none;
   order: 1;
   flex-grow: 0;
   margin: 8px 0px;

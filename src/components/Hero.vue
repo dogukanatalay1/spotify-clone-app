@@ -91,6 +91,7 @@ export default {
       .then((res) => {
         localStorage.setItem('access_token', res.data.access_token);
         // later, we call access_token in Playlists.vue 
+        console.log(res);
       });
   },
   methods: {

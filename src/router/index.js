@@ -2,15 +2,23 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import VueAxios from "vue-axios";
 import axios from "axios";
+import HomePage from "../views/HomePage"
 
  var Spotify = require('spotify-web-api-js');
  var s = new Spotify();
  s.searchTracks();
 
+
+
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
 
 const routes = [
+  {
+    path: "/",
+    name: "HomePage",
+    component: HomePage,
+  },
   {
     path: "/about",
     name: "About",
