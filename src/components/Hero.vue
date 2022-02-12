@@ -72,7 +72,7 @@ export default {
         "https://accounts.spotify.com/api/token",
         queryString.stringify({
           code: params.code,
-          redirect_uri: "http://localhost:8080/",
+          redirect_uri: process.env.VUE_APP_REDIRECT_URI,
           grant_type: "authorization_code",
         }),
         {
@@ -99,7 +99,7 @@ export default {
         response_type: "code",
         client_id: process.env.VUE_APP_CLIENT_ID,
         scope: "user-read-private user-read-email",
-        redirect_uri: "http://localhost:8080/",
+        redirect_uri: process.env.VUE_APP_REDIRECT_URI,
         show_dialog: true,
       };
       params = new URLSearchParams(params).toString();
