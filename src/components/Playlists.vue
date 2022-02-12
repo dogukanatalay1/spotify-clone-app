@@ -4,13 +4,23 @@
       Playlists
     </p>
 
-    <div class="items d-flex flex-column position-static" v-for="(playlist,index) in playlists" :key="playlist.id">
+    <div
+      class="items d-flex flex-column position-static"
+      v-for="(playlist, index) in playlists"
+      :key="playlist.id"
+    >
       <div class="song-item d-flex flex-row align-items-center position-static">
-        <img :src="playlist.images.length > 0 ? playlist.images[0].url : unknownUrl" class="song-cover" alt="" />
+        <img
+          :src="
+            playlist.images.length > 0 ? playlist.images[0].url : unknownUrl
+          "
+          class="song-cover"
+          alt=""
+        />
         <p
           class="no position-static d-flex align-items-center text-align-center"
         >
-          {{ index + 1}}
+          {{ index + 1 }}
         </p>
         <div class="icon">
           <img src="../assets/images/heart.png" class="heart-icon" alt="" />
@@ -27,34 +37,31 @@
       <div class="divider">
         <img src="../assets/images/divider.png" class="divider-cross" alt="" />
       </div>
-
-    </div>  
+    </div>
   </div>
 </template>
 
 <script>
- import SpotifyWebApi from 'spotify-web-api-js';
+import SpotifyWebApi from "spotify-web-api-js";
 
 export default {
-  data(){
-    return{
-      playlists : [],
-      unknownUrl : require("../assets/images/Song Cover.png")
-    }
-
+  data() {
+    return {
+      playlists: [],
+      unknownUrl: require("../assets/images/Song Cover.png"),
+    };
   },
-  
-  mounted () {
+
+  mounted() {
     const spotifyApi = new SpotifyWebApi();
 
-    spotifyApi.setAccessToken(localStorage.getItem('access_token'));
+    spotifyApi.setAccessToken(localStorage.getItem("access_token"));
 
-    spotifyApi.getUserPlaylists().then(res =>{
+    spotifyApi.getUserPlaylists().then((res) => {
       this.playlists = res.items;
       console.log(res);
-    })
-    
-  }
+    });
+  },
 };
 </script>
 
