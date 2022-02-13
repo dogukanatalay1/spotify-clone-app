@@ -37,7 +37,7 @@
 
       <!-- Hero buttons -->
       <div class="hero-buttons d-flex flex-row position-static">
-        <button class="play-button d-flex flex-row">
+        <button class="play-button align-items-center d-flex flex-row">
           <span class="d-flex position-static mt-8 mb-8 mr-36"> PLAY </span>
         </button>
         <button class="follow-button d-flex flex-row ml-125 mt-12">
@@ -89,8 +89,8 @@ export default {
         }
       )
       .then((res) => {
-        localStorage.setItem('access_token', res.data.access_token);
-        // later, we call access_token in Playlists.vue 
+        localStorage.setItem("access_token", res.data.access_token);
+        // later, we call access_token in Playlists.vue
         console.log(res);
       });
   },
@@ -155,7 +155,6 @@ export default {
 }
 .play-button {
   justify-content: center;
-  align-items: center;
   padding: 8px;
 
   position: static;

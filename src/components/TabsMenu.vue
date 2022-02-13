@@ -54,7 +54,7 @@ export default {};
   height: 42px;
   left: 0px;
   bottom: 0px;
-  /* Inside auto layout */
+
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -66,7 +66,7 @@ export default {};
   height: 42px;
   left: 107px;
   bottom: 0px;
-  /* Inside auto layout */
+
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -78,7 +78,7 @@ export default {};
   height: 42px;
   left: 253px;
   bottom: 0px;
-  /* Inside auto layout */
+
   flex: none;
   order: 2;
   flex-grow: 0;
@@ -90,7 +90,7 @@ export default {};
   height: 42px;
   left: 334px;
   bottom: 0px;
-  /* Inside auto layout */
+
   flex: none;
   order: 3;
   flex-grow: 0;
@@ -107,7 +107,7 @@ export default {};
   height: 20px;
   left: 16px;
   top: 12px;
-  /* Inside auto layout */
+
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -125,15 +125,15 @@ export default {};
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
+
   text-align: center;
   letter-spacing: 0.25px;
   text-transform: uppercase;
 
-  /* Black -> Grey/#CCCCCC - 100% */
+ 
 
   color: #cccccc;
-  /* Inside auto layout */
+  
   cursor: pointer;
   flex: none;
   order: 1;
@@ -152,7 +152,7 @@ export default {};
   height: 20px;
   left: 16px;
   top: 12px;
-  /* Inside auto layout */
+
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -174,7 +174,6 @@ export default {};
   letter-spacing: 0.25px;
   text-transform: uppercase;
   color: #cccccc;
-  /* Inside auto layout */
 
   flex: none;
   order: 1;
@@ -193,7 +192,6 @@ export default {};
   height: 20px;
   left: 16px;
   top: 12px;
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -271,12 +269,7 @@ export default {};
   left: 16px;
   bottom: 0px;
 
-  /* Shade Green / #08C08C - 10% */
-
   background: #09d89d;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;

@@ -11,7 +11,27 @@
             <div class="friend-listened">
               <p>Friends Name</p>
             </div>
-            <p class="played-song">Played Song Name</p>
+            <p class="played-song d-flex align-items-center">Played Song Name</p>
+            <p class="artist-name">Artist Name</p>
+          </div>
+        </div>
+        <div class="friends-item">
+          <img class="artist-photo" src="../assets/images/artist.png" alt="" />
+          <div class="frame-1">
+            <div class="friend-listened">
+              <p>Friends Name</p>
+            </div>
+            <p class="played-song d-flex align-items-center">Played Song Name</p>
+            <p class="artist-name">Artist Name</p>
+          </div>
+        </div>
+        <div class="friends-item">
+          <img class="artist-photo" src="../assets/images/artist.png" alt="" />
+          <div class="frame-1">
+            <div class="friend-listened">
+              <p>Friends Name</p>
+            </div>
+            <p class="played-song d-flex align-items-center">Played Song Name</p>
             <p class="artist-name">Artist Name</p>
           </div>
         </div>
@@ -31,27 +51,7 @@
             <div class="friend-listened">
               <p>Friends Name</p>
             </div>
-            <p class="played-song">Played Song Name</p>
-            <p class="artist-name">Artist Name</p>
-          </div>
-        </div>
-        <div class="friends-item">
-          <img class="artist-photo" src="../assets/images/artist.png" alt="" />
-          <div class="frame-1">
-            <div class="friend-listened">
-              <p>Friends Name</p>
-            </div>
-            <p class="played-song">Played Song Name</p>
-            <p class="artist-name">Artist Name</p>
-          </div>
-        </div>
-        <div class="friends-item">
-          <img class="artist-photo" src="../assets/images/artist.png" alt="" />
-          <div class="frame-1">
-            <div class="friend-listened">
-              <p>Friends Name</p>
-            </div>
-            <p class="played-song">Played Song Name</p>
+            <p class="played-song d-flex align-items-center">Played Song Name</p>
             <p class="artist-name">Artist Name</p>
           </div>
         </div>
@@ -193,7 +193,6 @@ export default {};
   font-weight: bold;
   font-size: 12px;
   line-height: 16px;
-  /* or 133% */
   display: flex;
   align-items: center;
 
@@ -216,14 +215,8 @@ export default {};
   font-weight: normal;
   font-size: 10px;
   line-height: 16px;
-  /* identical to box height, or 160% */
-
-  display: flex;
-  align-items: center;
 
   color: #ababab;
-
-  /* Inside auto layout */
 
   flex: none;
   order: 2;

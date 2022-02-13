@@ -55,8 +55,6 @@ export default {};
   flex-grow: 0;
   margin: 0px 14px;
   cursor: pointer;
-
-  
 }
 .song-cover {
   width: 78px;
@@ -69,7 +67,6 @@ export default {};
   flex-grow: 0;
   margin: 0px 0px;
   cursor: pointer;
-  
 }
 .latest-date {
   position: static;
@@ -143,6 +140,5 @@ flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 0px;
-
 }
 </style>

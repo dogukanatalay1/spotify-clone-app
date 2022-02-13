@@ -86,7 +86,6 @@ export default {};
   left: 0px;
   top: 0px;
 
-  /* Inside auto layout ? */
   flex: none;
   order: 0;
   flex-grow: 0;
@@ -100,7 +99,6 @@ export default {};
   left: 0px;
   top: 140px;
 
-  /* Inside auto layout */
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -172,13 +170,11 @@ export default {};
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
 
   letter-spacing: 0.25px;
 
   color: #ffffff;
 
-  /* Inside auto layout */
   cursor: pointer;
   flex: none;
   order: 1;
@@ -198,13 +194,11 @@ export default {};
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
 
   letter-spacing: 0.25px;
 
   color: #ffffff;
 
-  /* Inside auto layout */
   cursor: pointer;
   flex: none;
   order: 1;
@@ -237,11 +231,9 @@ export default {};
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
-  /* identical to box height, or 180% */
 
   letter-spacing: 0.4px;
   color: #ababab;
-  /* Inside auto layout */
 
   flex: none;
   order: 1;
@@ -256,8 +248,6 @@ export default {};
   height: 32px;
   left: 0px;
   top: 30px;
-
-  /* Inside auto layout */
 
   flex: none;
   order: 1;
@@ -277,13 +267,10 @@ export default {};
   font-weight: bold;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
 
   letter-spacing: 0.25px;
 
   color: #ababab;
-
-  /* Inside auto layout */
 
   flex: none;
   order: 1;
@@ -299,8 +286,6 @@ export default {};
   height: 30px;
   left: 0px;
   top: 0px;
-
-  /* Inside auto layout */
 
   flex: none;
   order: 0;
@@ -319,14 +304,10 @@ export default {};
   font-weight: normal;
   font-size: 10px;
   line-height: 18px;
-  /* identical to box height, or 180% */
-
   letter-spacing: 0.4px;
   text-transform: uppercase;
 
   color: #ababab;
-
-  /* Inside auto layout */
 
   flex: none;
   order: 1;
@@ -340,9 +321,6 @@ export default {};
   height: 32px;
   left: 0px;
   top: 30px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -361,14 +339,9 @@ export default {};
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
-  /* identical to box height, or 143% */
-
   letter-spacing: 0.25px;
 
   color: #ababab;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 1;

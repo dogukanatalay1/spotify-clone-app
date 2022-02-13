@@ -6,29 +6,28 @@
         class="artist-item d-flex flex-row align-items-center position-static"
       >
         <img src="../assets/images/artist.png" alt="" />
-        <span class="artist-name">Syahreza</span>
+        <span class="artist-name d-flex align-items-centers">Syahreza</span>
       </div>
         <div
         class="artist-item d-flex flex-row align-items-center position-static"
       >
         <img src="../assets/images/artist.png" alt="" />
-        <span class="artist-name">Husna</span>
+        <span class="artist-name d-flex align-items-center">Husna</span>
       </div>
         <div
         class="artist-item d-flex flex-row align-items-center position-static"
       >
         <img src="../assets/images/artist.png" alt="" />
-        <span class="artist-name">Pamungkas</span>
+        <span class="artist-name d-flex align-items-center">Pamungkas</span>
       </div>
         <div
         class="artist-item d-flex flex-row align-items-center position-static"
       >
         <img src="../assets/images/artist.png" alt="" />
-        <span class="artist-name">Sizy Hamilton</span>
+        <span class="artist-name d-flex align-items-center">Sizy Hamilton</span>
       </div>
-      
     </div>
-  </div>
+  </div> 
 </template>
 
 <script>
@@ -55,14 +54,11 @@ export default {};
   font-weight: bold;
   font-size: 13px;
   line-height: 20px;
-  /* identical to box height, or 143% */
 
   align-items: center;
   letter-spacing: 0.25px;
 
   color: #ffffff;
-
-  /* Inside auto layout */
 
   flex: none;
   order: 0;
@@ -77,9 +73,6 @@ export default {};
   height: 296px;
   left: 0px;
   top: 32px;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;
@@ -122,16 +115,10 @@ img {
   font-weight: bold;
   font-size: 12px;
   line-height: 18px;
-  /* identical to box height, or 150% */
 
-  display: flex;
-  align-items: center;
   letter-spacing: 0.4px;
 
   color: #ffffff;
-
-  /* Inside auto layout */
-
   flex: none;
   order: 1;
   flex-grow: 0;

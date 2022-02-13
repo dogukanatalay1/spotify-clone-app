@@ -126,13 +126,14 @@
 
 <script>
 /*
-// trackNav / track-song / track-played
 import SpotifyWebApi from "spotify-web-api-js";
 const spotifyApi = new SpotifyWebApi();
 import ref from "vue";
-//const containerClass = ref("");
-// const trackNav = ref(null);
+const containerClass = ref("");
+const trackNav = ref(null);
 const playbackData = ref();
+
+
 const getMyCurrentPlayingTrack = () =>{
   return spotifyApi.getMyCurrentPlayingTrack();
 }
