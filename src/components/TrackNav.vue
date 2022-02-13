@@ -125,26 +125,27 @@
 </template>
 
 <script>
+/*
 // trackNav / track-song / track-played
 import SpotifyWebApi from "spotify-web-api-js";
 const spotifyApi = new SpotifyWebApi();
-//import ref from "vue";
+import ref from "vue";
 //const containerClass = ref("");
 // const trackNav = ref(null);
-// const playbackData = ref();
+const playbackData = ref();
+const getMyCurrentPlayingTrack = () =>{
+  return spotifyApi.getMyCurrentPlayingTrack();
+}
 
 export default {
-  methods: {
-    getMyCurrentPlayingTrack: function () {
-      return spotifyApi.getMyCurrentPlayingTrack();
-    },
-  },
+ 
   mounted() {
-   /* getMyCurrentPlayingTrack().then((res) => {
+    getMyCurrentPlayingTrack().then((res) => {
       playbackData.value = res;
-    }); */
+    }); 
   },
 };
+*/
 </script>
 
 <style>
