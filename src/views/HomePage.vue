@@ -18,9 +18,9 @@ import AsideRight from "../components/AsideRight.vue";
 import TrackNav from "../components/TrackNav.vue";
 import Hero from "../components/Hero.vue";
 import TabsMenu from "../components/TabsMenu.vue";
-import Playlists from '../components/Playlists.vue' ;
-import LatestSection from '../components/LatestSection.vue';
-import FansAlsoLike from '../components/FansAlsoLike.vue';
+import Playlists from "../components/Playlists.vue";
+import LatestSection from "../components/LatestSection.vue";
+import FansAlsoLike from "../components/FansAlsoLike.vue";
 
 export default {
   components: {
@@ -31,7 +31,7 @@ export default {
     TabsMenu,
     Playlists,
     LatestSection,
-    FansAlsoLike
+    FansAlsoLike,
   },
 };
 </script>
@@ -42,9 +42,9 @@ export default {
   width: 1366px;
   left: -700px;
   top: 34px;
-  
+
   background: #0a0a0a;
-  border: .01px solid black;
+  border: 0.01px solid black;
   height: 768px;
 }
 template {

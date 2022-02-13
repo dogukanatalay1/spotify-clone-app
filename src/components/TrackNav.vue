@@ -1,5 +1,9 @@
 <template>
-  <div class="track-nav position-absolute">
+  <div
+    class="trackNav position-absolute"
+    ref="trackNav"
+    :class="containerClass"
+  >
     <!-- Song info  -->
     <div
       class="
@@ -29,7 +33,7 @@
         >
           <span
             class="track-song-name d-flex align-items-center text-align-center"
-            >Album / Song Name</span
+            >{playbackData.item.name }</span
           >
           <img
             src="../assets/images/heart.png"
@@ -54,14 +58,11 @@
         position-absolute
       "
     >
-      
       <div class="track-buttons d-flex flex-row position-static">
         <div class="button-suffle">
-          <div class="icon-suffle">
-           Shuffle
-          </div>
+          <div class="icon-suffle">Shuffle</div>
         </div>
-       
+
         <div class="button-prev">
           <div class="prev-playlist-icon">
             <img
@@ -86,9 +87,7 @@
           </div>
         </div>
 
-        <div class="button-repeat">
-          Repeat
-        </div>
+        <div class="button-repeat">Repeat</div>
       </div>
 
       <!--  -->
@@ -126,17 +125,30 @@
 </template>
 
 <script>
+// trackNav / track-song / track-played
+import SpotifyWebApi from "spotify-web-api-js";
+const spotifyApi = new SpotifyWebApi();
+//import ref from "vue";
+//const containerClass = ref("");
+// const trackNav = ref(null);
+// const playbackData = ref();
 
 export default {
-
-
-
-
+  methods: {
+    getMyCurrentPlayingTrack: function () {
+      return spotifyApi.getMyCurrentPlayingTrack();
+    },
+  },
+  mounted() {
+   /* getMyCurrentPlayingTrack().then((res) => {
+      playbackData.value = res;
+    }); */
+  },
 };
 </script>
 
 <style>
-.track-nav {
+.trackNav {
   width: 1366px;
   height: 68px;
   top: 700px;
@@ -444,16 +456,16 @@ export default {
   right: 2px;
   top: 8.5px;
 }
-.icon-suffle{
+.icon-suffle {
   font-size: 10px;
-  margin-top: 6px ;
+  margin-top: 6px;
   color: #ffffff;
   font: Circular Std;
   cursor: pointer;
 }
-.button-repeat{
+.button-repeat {
   font-size: 10px;
-  margin-top: 6px ;
+  margin-top: 6px;
   color: #ffffff;
   font: Circular Std;
   cursor: pointer;
